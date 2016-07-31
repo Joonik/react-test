@@ -31,6 +31,12 @@ module.exports = {
 	module: {
 		loaders: [
 			{
+				test : /\.jsx?/,
+				include : path.join(__dirname, 'src'),
+				loader : 'babel'
+			},
+
+			{
 				test: /\.ico$/,
 				loader: 'file?name=[name].[ext]'
 			}

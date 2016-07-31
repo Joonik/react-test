@@ -6,4 +6,20 @@
 // Tell webpack to load favicon.ico
 require('./favicon.ico');
 
-document.getElementById('app').innerHTML = 'This is a webpack test';
+import React from 'react';
+import {render} from 'react-dom';
+
+import LikesComponent from './LikesComponent.jsx';
+
+class App extends React.Component {
+	render () {
+		return (
+			<div>
+				<p>This is a webpack test with React</p>
+				<LikesComponent/>
+			</div>
+		);
+	}
+}
+
+render(<App/>, document.getElementById('app'));
