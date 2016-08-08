@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "React test with webpack, bootstrap and redux",
   "scripts": {
-    "build": "NODE_ENV=production rimraf public && webpack -p",
-    "build-win": "set NODE_ENV=production && rimraf public && webpack -p",
+    "build": "rimraf public && NODE_ENV=production webpack -p",
+    "build-win": "rimraf public && set NODE_ENV=production && webpack -p",
     "devel": "concurrently \"webpack -d --watch\" \"livereload public\" \"http-server public\""
   },
   "repository": {

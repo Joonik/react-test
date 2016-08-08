@@ -16,6 +16,11 @@ module.exports = {
 	},
 
 	plugins: [
+		new webpack.DefinePlugin({
+			'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
+			__DEV__: process.env.NODE_ENV != 'production'
+		}),
+
 		new ExtractTextPlugin('index.css', {allChunks: true}),
 
 		new HtmlWebpackPlugin({
